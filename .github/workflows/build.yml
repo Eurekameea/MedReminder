@@ -8,10 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -22,7 +20,13 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Grant Gradle execute permission
+      - name: Download Gradle Wrapper JAR
+        run: |
+          mkdir -p gradle/wrapper
+          curl -Lo gradle/wrapper/gradle-wrapper.jar \
+            https://github.com/gradle/gradle/raw/v8.2.0/gradle/wrapper/gradle-wrapper.jar
+
+      - name: Grant execute permission
         run: chmod +x gradlew
 
       - name: Build Debug APK
@@ -34,19 +38,3 @@ jobs:
           name: MedReminder-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
-```
-
-4. 右上角點 **Commit changes** → 再點 **Commit changes**
-
----
-
-## 第二步：上傳原始碼
-
-回到倉庫根目錄（點左上 `MedReminder`），點 **Add file → Upload files**，把 ZIP 解壓後這些資料夾/檔案**全部拖進去**：
-```
-app/
-gradlew
-build.gradle
-settings.gradle
-gradle.properties
-gradle/
