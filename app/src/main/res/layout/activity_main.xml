@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:padding="32dp" android:background="#0D0F14">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="&#x1f48a; 藥物提醒" android:textSize="26sp" android:textStyle="bold"
+        android:textColor="#EEEEF7" android:layout_marginBottom="6dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="每天準時提醒  釘死不消失"
+        android:textSize="12sp" android:textColor="#555D7A" android:layout_marginBottom="28dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="設定提醒時間" android:textSize="13sp" android:textColor="#8B90A8"
+        android:textStyle="bold" android:layout_marginBottom="8dp"/>
+    <TimePicker android:id="@+id/timePicker"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+    <TextView android:id="@+id/tvStatus"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="未啟動" android:textSize="14sp" android:textColor="#EEEEF7"
+        android:gravity="center" android:background="#161922"
+        android:padding="16dp" android:layout_marginBottom="20dp"/>
+    <Button android:id="@+id/btnToggle"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:text="開始計算（啟動提醒）"
+        android:textSize="15sp" android:textColor="#FFFFFF" android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="啟動後每天在設定時間，頂端狀態列出現藥丸圖示。OPPO/realme 請依指示關閉電池優化。"
+        android:textSize="11sp" android:textColor="#555D7A"
+        android:gravity="center" android:lineSpacingMultiplier="1.5"/>
+</LinearLayout>

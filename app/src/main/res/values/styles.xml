@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">#B71C1C</item>
+        <item name="colorPrimaryDark">#7F0000</item>
+        <item name="colorAccent">#FF4444</item>
+        <item name="android:windowBackground">#0D0F14</item>
+        <item name="android:textColorPrimary">#EEEEF7</item>
+        <item name="android:textColorSecondary">#8B90A8</item>
+        <item name="colorControlNormal">#EEEEF7</item>
+        <item name="colorControlActivated">#FF4444</item>
+        <item name="android:timePickerStyle">@style/DarkTimePicker</item>
+    </style>
+    <style name="DarkTimePicker" parent="android:Widget.Material.TimePicker">
+        <item name="android:textColorPrimary">#EEEEF7</item>
+        <item name="android:background">#161922</item>
+        <item name="colorPrimary">#FF4444</item>
+        <item name="colorAccent">#FF4444</item>
+    </style>
+</resources>
